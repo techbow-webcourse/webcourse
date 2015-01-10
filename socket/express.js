@@ -18,6 +18,13 @@ app.get('/', function(req, res) {
   }
 }); 
 
+app.get('/api/test', function(req, res) {
+  var result = {};
+  result.val = 123;
+  result.str = 'text';
+  res.json(result);
+});
+
 var port = process.env.PORT || 8080;
 server.listen(port);
 console.log("App listening on port " + port);
